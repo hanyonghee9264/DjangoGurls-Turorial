@@ -2,6 +2,7 @@ import os
 import random
 
 from django.http import HttpResponse
+from django.shortcuts import render
 from django.template import loader
 
 
@@ -29,6 +30,7 @@ def post_list(request):
     # template.render
     # HttpResponse(content)
     return render(
-        request-request,
-        template_name = 'blog/post_list.html'
+        request=request,
+        template_name = 'blog/post_list.html',
+        context=context,
     )
