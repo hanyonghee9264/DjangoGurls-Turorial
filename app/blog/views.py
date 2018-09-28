@@ -8,7 +8,7 @@ from .models import Post
 
 
 def post_list(request):
-    posts = Post.objects.all()
+    posts = Post.objects.order_by('-created_date')
     context = {
         'posts': posts,
     }
