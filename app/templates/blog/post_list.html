@@ -24,7 +24,7 @@
                 <h5 class="card-title">{{ post.title }}</h5>
                 <h5 class="text-right">Author: {{ post.author }}</h5>
                 <h5 class="card-subtitle mb-2 text-muted">{{ post.created_date }}</h5>
-                <h5 class="card-text">{{ post.text }}</h5>
+                <h5 class="card-text">{{ post.text|linebreaksbr|truncatechars:200 }}</h5>
             </div>
         </div>
         {% endfor %}
