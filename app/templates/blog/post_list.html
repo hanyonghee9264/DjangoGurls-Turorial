@@ -22,6 +22,7 @@
         <div class="card mb-2">
             <div class="card-body">
                 <h5 class="card-title">{{ post.title }}</h5>
+                <a href="/posts/{{ post.pk }}/">{{ post.title }}</a>
                 <h5 class="text-right">Author: {{ post.author }}</h5>
                 <h5 class="card-subtitle mb-2 text-muted">{{ post.created_date }}</h5>
                 <h5 class="card-text">{{ post.text|linebreaksbr|truncatechars:200 }}</h5>
