@@ -1,16 +1,16 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h2>새 포스트 작성</h2>
+<h2>포스트({{ post.title }}) 수정</h2>
 <form action="" method="POST">
     {% csrf_token %}
     <div class="form-group">
-        <label for="pk-title">제목</label>
-        <input id="pk-title" name="title" class="form-control">
+        <label for="id-title">제목</label>
+        <input id="id-title" name="title" class="form-control" value="{{ post.title }}">
     </div>
     <div class="form-group">
-        <label for="pk-text">내용</label>
-        <textarea name='text' id="pk-text" cols="30" rows="10" class="form-control"></textarea>
+        <label for="id-text">내용</label>
+        <textarea name='text' id="id-text" cols="30" rows="10" class="form-control">{{ post.text }}</textarea>
     </div>
     <button class="btn btn-primary btn-block" type="submit">작성</button>
 </form>
